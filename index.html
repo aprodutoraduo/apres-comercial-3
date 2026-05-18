@@ -437,10 +437,10 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
   z-index: 1;
 }
 .process-icon svg {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   fill: none;
-  stroke-width: 2.8;
+  stroke-width: 2.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -544,7 +544,8 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
   position: absolute;
   top: 16px;
   left: 18px;
-  color: rgba(255,255,255,0.18);
+  color: var(--accent, rgba(255,255,255,0.18));
+  opacity: 0.52;
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.18em;
@@ -555,21 +556,22 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
   inset: auto 22px 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent, rgba(255,255,255,0.5)), transparent);
+  box-shadow: 0 0 14px var(--accent, rgba(255,255,255,0.2));
 }
 .agenda-icon {
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.72);
+  border: 1.5px solid var(--accent, rgba(255,255,255,0.72));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--accent, var(--white));
   margin-top: 22px;
   margin-bottom: 26px;
   background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(0,0,0,0.34));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07), 0 16px 34px rgba(0,0,0,0.28);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07), 0 16px 34px rgba(0,0,0,0.28), 0 0 22px var(--accent-glow, rgba(255,255,255,0.12));
 }
 .agenda-icon svg {
   width: 38px;
@@ -812,29 +814,29 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
       <h2 class="agenda-title">Agenda da Reunião</h2>
       <p class="agenda-subtitle">Entenda como vamos transformar o diagnóstico em estratégia, e estratégia em resultado.</p>
       <div class="agenda-timeline">
-        <div class="agenda-item" data-step="01">
+        <div class="agenda-item" data-step="01" style="--accent:#ff6a00;--accent-glow:rgba(255,106,0,0.20);">
           <div class="agenda-icon"><span class="agenda-logo">duo</span></div>
           <div class="agenda-name">Quem<br/>Somos?</div>
         </div>
-        <div class="agenda-item" data-step="02">
+        <div class="agenda-item" data-step="02" style="--accent:#4a9cff;--accent-glow:rgba(74,156,255,0.20);">
           <div class="agenda-icon">
             <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="10"/><path d="M14 20l5 5 10-12"/><path d="M30 30l9 9"/><path d="M29 10l4-4 3 5 6 1-5 4 1 6-5-3-5 3 1-6-5-4z"/></svg>
           </div>
           <div class="agenda-name">Diagnóstico<br/>do Cliente</div>
         </div>
-        <div class="agenda-item" data-step="03">
+        <div class="agenda-item" data-step="03" style="--accent:#ffcf4a;--accent-glow:rgba(255,207,74,0.18);">
           <div class="agenda-icon">
             <svg viewBox="0 0 48 48"><path d="M24 5l4 7 8 2-5 6 1 8-8-3-8 3 1-8-5-6 8-2z"/><circle cx="24" cy="18" r="10"/><path d="M17 30l-4 13 11-6 11 6-4-13"/></svg>
           </div>
           <div class="agenda-name">Nossa<br/>Metodologia</div>
         </div>
-        <div class="agenda-item" data-step="04">
+        <div class="agenda-item" data-step="04" style="--accent:#43d27d;--accent-glow:rgba(67,210,125,0.18);">
           <div class="agenda-icon">
             <svg viewBox="0 0 48 48"><path d="M9 39h30"/><path d="M13 39V25h7v14"/><path d="M22 39V17h7v22"/><path d="M31 39V10h7v29"/><path d="M24 7l2 4 5 1-4 3 1 5-4-2-4 2 1-5-4-3 5-1z"/></svg>
           </div>
           <div class="agenda-name">Cases de<br/>Sucesso</div>
         </div>
-        <div class="agenda-item" data-step="05">
+        <div class="agenda-item" data-step="05" style="--accent:#ef4d9a;--accent-glow:rgba(239,77,154,0.18);">
           <div class="agenda-icon">
             <svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="26" rx="3"/><path d="M15 17h18M15 24h18M15 31h18"/><circle cx="19" cy="40" r="2"/><circle cx="29" cy="40" r="2"/><path d="M16 17l2 2 4-5M16 24l2 2 4-5M16 31l2 2 4-5"/></svg>
           </div>
@@ -990,28 +992,28 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
       <div class="process-timeline">
         <div class="process-item">
           <div class="process-icon">
-            <svg viewBox="0 0 64 64" stroke="#4a9cff"><circle cx="28" cy="28" r="20"/><path d="M43 43l13 13"/></svg>
+            <svg viewBox="0 0 64 64" stroke="#4a9cff"><circle cx="28" cy="28" r="16"/><path d="M40 40l12 12"/><path d="M21 28h14M28 21v14"/></svg>
           </div>
           <div class="process-name">Diagnóstico</div>
           <div class="process-copy">Análise completa da loja, métricas e oportunidades</div>
         </div>
         <div class="process-item">
           <div class="process-icon">
-            <svg viewBox="0 0 64 64" stroke="#43d27d"><path d="M18 42l14-14 14 14"/><path d="M20 22l12-12"/><path d="M44 22l-12-12"/><path d="M16 50h10M38 50h10"/></svg>
+            <svg viewBox="0 0 64 64" stroke="#43d27d"><path d="M18 42l10-10 8 8 12-18"/><path d="M18 50h30"/><path d="M20 18h14"/><path d="M20 26h20"/></svg>
           </div>
           <div class="process-name">Implementação</div>
           <div class="process-copy">Ajustes estratégicos no cardápio e estrutura</div>
         </div>
         <div class="process-item">
           <div class="process-icon">
-            <svg viewBox="0 0 64 64" stroke="#ff9a2f"><path d="M32 12v10M32 42v10M12 32h10M42 32h10M18 18l7 7M39 39l7 7M46 18l-7 7M25 39l-7 7"/><circle cx="32" cy="32" r="5"/></svg>
+            <svg viewBox="0 0 64 64" stroke="#ff9a2f"><path d="M32 10v10M32 44v10M10 32h10M44 32h10M17 17l7 7M40 40l7 7M47 17l-7 7M24 40l-7 7"/><circle cx="32" cy="32" r="7"/></svg>
           </div>
           <div class="process-name">Otimização</div>
           <div class="process-copy">Melhorias contínuas com base nos dados reais</div>
         </div>
         <div class="process-item">
           <div class="process-icon">
-            <svg viewBox="0 0 64 64" stroke="#ef4d9a"><path d="M22 18l10-6 10 6v12l-10 6-10-6z"/><path d="M22 18l10 6 10-6M32 24v12"/></svg>
+            <svg viewBox="0 0 64 64" stroke="#ef4d9a"><rect x="18" y="16" width="28" height="34" rx="4"/><path d="M24 26h16M24 34h16M24 42h10"/><path d="M44 14v8M20 14v8"/></svg>
           </div>
           <div class="process-name">Acompanhamento</div>
           <div class="process-copy">Monitoramento constante com otimizações frequentes</div>
@@ -1166,19 +1168,12 @@ p  { font-size: 20px; font-weight: 400; line-height: 1.6; color: var(--mid); tex
           </div>
         </div>
         <!-- Terms cards -->
-        <div style="display:flex;flex-direction:column;gap:16px;justify-content:center;">
+        <div style="display:flex;flex-direction:column;gap:24px;justify-content:center;">
           <div class="icon-row">
             <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(214,214,214,0.08));border:1px solid rgba(255,255,255,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:24px;">📅</div>
             <div>
               <div style="font-size:18px;font-weight:700;color:var(--white);">Contrato de 3 meses</div>
               <div style="font-size:14px;color:var(--dim);margin-top:4px;">Tempo necessário pra construir resultado real</div>
-            </div>
-          </div>
-          <div class="icon-row">
-            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(214,214,214,0.08));border:1px solid rgba(255,255,255,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:24px;">🛡️</div>
-            <div>
-              <div style="font-size:18px;font-weight:700;color:var(--white);">Garantia de resultado</div>
-              <div style="font-size:14px;color:var(--dim);margin-top:4px;">Se não houver retorno, continuamos sem cobrar mão de obra</div>
             </div>
           </div>
           <div class="icon-row">
